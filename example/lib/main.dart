@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 
 final ThemeData androidTheme = new ThemeData(
@@ -80,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             initialDate: Jalali.now(),
                             firstDate: Jalali(1385, 8),
                             lastDate: Jalali(1450, 9),
+                            initialEntryMode: PDatePickerEntryMode.calendar
                           );
                           if (picked != null && picked != selectedDate) {
                             setState(() {
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             });
                           }
                         },
-                        image: "08",
+                        image: '08',
                       ),
                       imageButton(
                         onTap: () async {
@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         child: CupertinoTheme(
                                           data: CupertinoThemeData(
                                             textTheme: CupertinoTextThemeData(
-                                              dateTimePickerTextStyle: TextStyle(fontFamily: "Dana"),
+                                              dateTimePickerTextStyle: TextStyle(fontFamily: 'Dana'),
                                             ),
                                           ),
                                           child: PCupertinoDatePicker(
@@ -157,11 +157,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
                           if (pickedDate != null) {
                             setState(() {
-                              label = "${pickedDate.toDateTime()}";
+                              label = '${pickedDate.toDateTime()}';
                             });
                           }
                         },
-                        image: "07",
+                        image: '07',
                       ),
                       imageButton(
                         onTap: () async {
@@ -180,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             if (picked != null) label = picked.persianFormat(context);
                           });
                         },
-                        image: "09",
+                        image: '09',
                       ),
                       imageButton(
                         onTap: () async {
@@ -232,7 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         child: CupertinoTheme(
                                           data: CupertinoThemeData(
                                             textTheme: CupertinoTextThemeData(
-                                              dateTimePickerTextStyle: TextStyle(fontFamily: "Dana"),
+                                              dateTimePickerTextStyle: TextStyle(fontFamily: 'Dana'),
                                             ),
                                           ),
                                           child: PCupertinoDatePicker(
@@ -252,11 +252,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
                           if (pickedDate != null) {
                             setState(() {
-                              label = "${pickedDate.toJalaliDateTime()}";
+                              label = '${pickedDate.toJalaliDateTime()}';
                             });
                           }
                         },
-                        image: "05",
+                        image: '05',
                       ),
                     ],
                   ),
@@ -274,12 +274,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             firstDate: Jalali(1385, 8),
                             lastDate: Jalali(1450, 9),
+                            
                           );
                           setState(() {
                             label = "${picked?.start?.toJalaliDateTime() ?? ""} ${picked?.end?.toJalaliDateTime() ?? ""}";
                           });
                         },
-                        image: "03",
+                        image: '03',
                       ),
                       imageButton(
                         onTap: () async {
@@ -297,7 +298,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             if (picked != null) label = picked.persianFormat(context);
                           });
                         },
-                        image: "04",
+                        image: '04',
                       ),
                       imageButton(
                         onTap: () async {
@@ -315,7 +316,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             label = "${picked?.start?.toJalaliDateTime() ?? ""} ${picked?.end?.toJalaliDateTime() ?? ""}";
                           });
                         },
-                        image: "06",
+                        image: '06',
                       ),
                     ],
                   ),

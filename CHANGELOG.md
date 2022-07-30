@@ -1,3 +1,8 @@
+## 2.5.1
+* [FIX]  Fix responsive issues
+## 2.5.0
+* [FIX]  Fix flutter lint error in Flutter 3.
+* [FIX]  Fix some issues.
 ## 2.4.0
 * [FIX]  Fix WhitelistingTextInputFormatter error in Flutter 2.8.
 ## 2.3.0
